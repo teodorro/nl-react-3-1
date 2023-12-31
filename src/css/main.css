@@ -1,0 +1,37 @@
+.item {
+  background-color: whitesmoke;
+  box-shadow: 0em 0.5em 1em rgba(126, 126, 126, 0.6);
+  box-sizing: border-box;
+  margin: 1em;
+  display: flex;
+  min-width: 400px;
+  min-height: 180px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.item-info {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.countButton{
+  width: 120px;
+}
+
+.title{
+  color: #000;
+  font-size: 16pt;
+  text-align: left;
+  margin-bottom: 0.5em;
+  margin-left: 0.2em;
+}
+
+.stars {
+  min-height: 50px;
+}

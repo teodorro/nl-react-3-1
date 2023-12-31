@@ -1,37 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Stars from './components/Stars'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Stars from "./components/Stars";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [countVite, setCountVite] = useState(0);
+  const [countReact, setCountReact] = useState(0);
 
   return (
     <>
       <div>
-        <Stars count={count}/>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <div className="item">
+          <img
+            src={viteLogo}
+            className="logo"
+            alt="Vite logo"
+          />
+          <div className="item-info">
+            <div className="title">Vite logo</div>
+            <div className="stars">
+              <Stars count={countVite} />
+            </div>
+            <button
+              className="countButton"
+              onClick={() => setCountVite((countVite) => (countVite + 1) % 6)}
+            >
+              count is {countVite}
+            </button>
+          </div>
+        </div>
+
+        <div className="item">
+          <img
+            src={reactLogo}
+            className="logo"
+            alt="React logo"
+          />
+          <div className="item-info">
+            <div className="title">React logo</div>
+            <div className="stars">
+              <Stars count={countReact} />
+            </div>
+            <button
+              className="countButton"
+              onClick={() => setCountReact((countReact) => (countReact + 1) % 6)}
+            >
+              count is {countReact}
+            </button>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

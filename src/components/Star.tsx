@@ -3,8 +3,8 @@ import "../css/main.css";
 
 export default function Star() {
   return (
-    <ul className="card-body-stars u-clearfix">
-      <li>
+    // <ul className="card-body-stars u-clearfix">
+    //   <li>
         <svg
           fill="#D3BCA2"
           height="28"
@@ -18,7 +18,7 @@ export default function Star() {
             fill="none"
           />
         </svg>
-      </li>
-    </ul>
+    //   </li>
+    // </ul>
   );
 }

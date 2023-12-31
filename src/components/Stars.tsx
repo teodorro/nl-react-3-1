@@ -1,7 +1,10 @@
 import '../css/main.css';
 import Star from './Star';
 
-export default function Stars({ count } : number) {
+type Props = { count: number}
+
+export default function Stars(props : Props) {
+  const count = props.count;
   if (typeof(count) !== 'number' || count < 1 || count > 5) {
     return (<></>)
   }
